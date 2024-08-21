@@ -1,0 +1,22 @@
+.product {
+  margin-top: 80px;
+
+  .product__content {
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+    gap: 20px;
+
+    img {
+      width: 320px;
+      height: 370px;
+      object-fit: cover;
+    }
+  }
+
+  .product__content::-webkit-scrollbar {
+    height: 0;
+  }
+}

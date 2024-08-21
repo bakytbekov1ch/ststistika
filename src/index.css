@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Langar&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
+  height: 90vh;
+  background: url("https://s3-alpha-sig.figma.com/img/fa03/b689/62d0d7f33bdcc51f893c6a44e7ff261d?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JKzjtEl0l-5HnShhKk4UEXBUfnSy73HUDrSB3yq8NhCN0id89yLBVIrQ0t0GE7g1Kthlz4VWfIZSnjDof3JKbfAhlZ2TRGxrYGueI0-Sq7yJAHiAAmm~SCUspSG3RXQZBef2aOAoI551VH5jIRB31fx3ryAHHQpPvCEdN4dDQFNnZSNTq3hJucHktK9e2UCmk6eX~fbvhWGbMzkG90nW6a00oWff5VhAf5hPv2dSHP5GKIZB7HME4Y1sFXmuTSy2NC9GPSb7nacZN7s5Mq2vGuCl7sedUkvoikmrA0MZjHfUzK3G--cPAfW8e8uOpqa1CrAdOZDaPIvRrrpa1jDAIA__")
+    center/cover;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}

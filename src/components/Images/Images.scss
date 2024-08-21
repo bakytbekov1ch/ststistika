@@ -1,0 +1,58 @@
+.images {
+  .images__button {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 320px;
+      height: 40px;
+      margin: 20px 0;
+      border-radius: 5px;
+      background: green;
+
+      color: white;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+    }
+  }
+
+  .images__content {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .images__block {
+      width: 320px;
+      padding-bottom: 10px;
+      border: 1px solid white;
+
+      img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      h1 {
+        color: White;
+        font-family: "inter";
+        text-align: center;
+        margin-top: 10px;
+        transition: 0.3s;
+      }
+    }
+
+    .images__block:hover > h1 {
+      color: blue;
+    }
+  }
+
+  .images__content::-webkit-scrollbar {
+    height: 0;
+  }
+}

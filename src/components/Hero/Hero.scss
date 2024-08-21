@@ -1,0 +1,28 @@
+.hero {
+  margin-top: 80px;
+
+  .hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    input {
+      width: 320px;
+      height: 35px;
+      border-radius: 3px;
+      background: none;
+      border: 1px solid white;
+
+      color: #fff;
+      font-size: 15px;
+      padding-left: 5px;
+      letter-spacing: 0.4px;
+    }
+
+    .input {
+      border: none;
+    }
+  }
+}

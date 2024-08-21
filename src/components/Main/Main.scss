@@ -1,0 +1,49 @@
+.main {
+  margin-top: 80px;
+
+  .main__content {
+    tr {
+      display: grid;
+      grid-template-columns: 40px 400px 250px 140px 140px 180px 129px;
+
+      th {
+        color: #fff;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: "inter";
+        text-align: start;
+        border: 1px solid #fff;
+      }
+    }
+
+    .main__block {
+      margin-top: 20px;
+
+      tr {
+        td {
+          color: #fff;
+          padding: 6px;
+          font-size: 16px;
+          font-weight: 300;
+          font-family: "inter";
+          text-align: start;
+          border: 1px solid #fff;
+        }
+        .main__icon {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .main__delete {
+            cursor: pointer;
+          }
+
+          .main__edit {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
