@@ -7,6 +7,7 @@ import Apple from "./components/Apple/Apple";
 import Images from "./components/Images/Images";
 import Product from "./components/Product/Product";
 import Hero from "./components/Hero/Hero";
+import Ubdate from "./components/Ubdate/Ubdate";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/apple" element={<Apple />} />
         <Route path="/images" element={<Images />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/ubdate/:id" element={<Ubdate />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </div>
   );

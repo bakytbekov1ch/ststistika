@@ -1,58 +1,71 @@
 import React, { useEffect, useState } from "react";
-
 import { MdOutlineDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
+import axios from "axios";
+import "./Home.scss";
+import { Link } from "react-router-dom";
 
 const API = "https://6631e14cc51e14d69562ac56.mockapi.io/statistika";
-
-import "./Home.scss";
-import axios from "axios";
 
 function Home() {
   const [phomen, setPhomen] = useState([]);
 
-  async function nameClick() {
-    try {
-      const res = await axios.get(API);
-      setPhomen(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   useEffect(() => {
-    nameClick();
+    axios
+      .get(API)
+      .then((res) => setPhomen(res.data))
+      .catch((err) => console.log(err));
   }, []);
+
+  const handleRemove = (id) => {
+    axios
+      .delete(`${API}/${id}`)
+      .then(() => {
+        setPhomen((prevPhomen) => prevPhomen.filter((item) => item.id !== id));
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="home">
       <div className="container">
         <div className="home__content">
-          <tr>
-            <th>№</th>
-            <th>Имя</th>
-            <th>ID</th>
-            <th>Баштапкы сумма</th>
-            <th>Түшкөн сумма</th>
-            <th>Түшкөн даход</th>
-            <th>Remove</th>
-          </tr>
-          <div className="home__block">
-            {phomen.map((item, index) => (
-              <tr key={index}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.codeId}</td>
-                <td>{item.first} с</td>
-                <td>{item.second} с</td>
-                <td>{item.third} с</td>
-                <td className="home__icon">
-                  <MdOutlineDelete className="home__delete" />
-                  <CiEdit className="home__edit" />
-                </td>
+          <table>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Имя</th>
+                <th>ID</th>
+                <th>Баштапкы сумма</th>
+                <th>Түшкөн сумма</th>
+                <th>Түшкөн даход</th>
+                <th>Remove</th>
               </tr>
-            ))}
-          </div>
+            </thead>
+            <tbody>
+              <div className="home__block">
+                {phomen.map((item, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{item.name}</td>
+                    <td>{item.codeId}</td>
+                    <td>{item.first} с</td>
+                    <td>{item.second} с</td>
+                    <td>{item.third} с</td>
+                    <td className="home__icon">
+                      <MdOutlineDelete
+                        onClick={() => handleRemove(item.id)}
+                        className="home__delete"
+                      />
+                      <Link to={`${"/ubdate"}/${item.id}`}>
+                        <CiEdit className="home__edit" />
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </div>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

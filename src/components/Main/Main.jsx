@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-
-import { MdOutlineDelete } from "react-icons/md";
-import { CiEdit } from "react-icons/ci";
+import axios from "axios";
 
 const API = "https://6631e14cc51e14d69562ac56.mockapi.io/statistika";
-
+import { Link } from "react-router-dom";
 import "./Main.scss";
-import axios from "axios";
 
 function Main() {
   const [name, setName] = useState([]);
@@ -28,30 +25,33 @@ function Main() {
     <div className="main">
       <div className="container">
         <div className="main__content">
-          <tr>
-            <th>№</th>
-            <th>Имя</th>
-            <th>ID</th>
-            <th>Общий шт</th>
-            <th>Продал шт</th>
-            <th>Цена</th>
-            <th>Remove</th>
-          </tr>
-          <div className="main__block">
-            {name.map((item, index) => (
-              <tr key={index}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.codeId}</td>
-                <td>{item.number}</td>
-                <td>{item.array}</td>
-                <td>{item.price} c</td>
-                <td className="main__icon">
-                  <MdOutlineDelete className="main__delete" />
-                  <CiEdit className="main__edit" />
-                </td>
-              </tr>
-            ))}
+          <div>
+            <tr>
+              <th>№</th>
+              <th>Имя</th>
+              <th>ID</th>
+              <th>Общий шт</th>
+              <th>Продал шт</th>
+              <th>Цена</th>
+              <th>Remove</th>
+            </tr>
+            <div className="main__block">
+              {name.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.codeId}</td>
+                  <td>{item.number}</td>
+                  <td>{item.array}</td>
+                  <td>{item.price} c</td>
+                  <td>
+                    <Link to={`/ubdate/${item.id}`}>
+                      <button>Оңдо</button>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </div>
           </div>
         </div>
       </div>
