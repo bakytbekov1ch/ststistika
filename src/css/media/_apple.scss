@@ -1,0 +1,66 @@
+@media (max-width: 1024px) {
+  .apple {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+      .apple__content {
+        tr {
+          grid-template-columns: repeat(7, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .apple {
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      width: 100%;
+      .apple__content {
+        tr {
+          th {
+            font-size: 16px;
+          }
+        }
+
+        .apple__block {
+          tr {
+            td {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .apple {
+    .container {
+      max-width: 375px;
+      margin: 0 auto;
+      width: 100%;
+      .apple__content {
+        display: none;
+      }
+
+      .home__w1 {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .apple {
+    .container {
+      max-width: 320px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

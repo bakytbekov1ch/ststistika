@@ -1,0 +1,31 @@
+.menu {
+  .menu__content {
+    display: none;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      li {
+        width: 100%;
+        height: 30px;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "inter";
+        box-shadow: 0 0 10px yellow;
+        border-radius: 20px;
+        letter-spacing: 1px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      li:hover {
+        color: blue;
+        box-shadow: 0 0 10px blue;
+      }
+    }
+  }
+}

@@ -5,9 +5,10 @@ import Home from "./components/Home/Home";
 import Main from "./components/Main/Main";
 import Apple from "./components/Apple/Apple";
 import Images from "./components/Images/Images";
-import Product from "./components/Product/Product";
+// import Product from "./components/Product/Product";
 import Hero from "./components/Hero/Hero";
 import Ubdate from "./components/Ubdate/Ubdate";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
         <Route path="/hero" element={<Hero />} />
         <Route path="/main" element={<Main />} />
         <Route path="/apple" element={<Apple />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/images" element={<Images />} />
         <Route path="/ubdate/:id" element={<Ubdate />} />
-        <Route path="/product/:id" element={<Product />} />
+        {/* <Route path="/product/:id" element={<Product />} /> */}
       </Routes>
     </div>
   );

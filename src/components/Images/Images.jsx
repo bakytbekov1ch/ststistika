@@ -33,12 +33,10 @@ function Images() {
         </div>
         <div className="images__content">
           {image.map((item, index) => (
-            <Link to="/product">
-              <div key={index} className="images__block">
-                <img src={item.img} alt="" />
-                <h1>{item.codeId}</h1>
-              </div>
-            </Link>
+            <div key={index} className="images__block">
+              <img src={item.img} alt="" />
+              <h1>{item.codeId}</h1>
+            </div>
           ))}
         </div>
       </div>
