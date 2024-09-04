@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
@@ -11,12 +11,20 @@ import Ubdate from "./components/Ubdate/Ubdate";
 import Menu from "./components/Menu/Menu";
 
 function App() {
+  const [search, setSearch] = useState("");
+
+  function handleSearch() {
+    const res = e.target.value.toUpperCase();
+
+    setSearch(res);
+  }
+
   return (
     <div>
-      <Header />
+      <Header click={handleSearch} />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home search={search} />} />
         <Route path="/hero" element={<Hero />} />
         <Route path="/main" element={<Main />} />
         <Route path="/apple" element={<Apple />} />

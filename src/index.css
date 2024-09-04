@@ -39,8 +39,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   height: 90vh;
-  background: url("https://s3-alpha-sig.figma.com/img/fa03/b689/62d0d7f33bdcc51f893c6a44e7ff261d?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JKzjtEl0l-5HnShhKk4UEXBUfnSy73HUDrSB3yq8NhCN0id89yLBVIrQ0t0GE7g1Kthlz4VWfIZSnjDof3JKbfAhlZ2TRGxrYGueI0-Sq7yJAHiAAmm~SCUspSG3RXQZBef2aOAoI551VH5jIRB31fx3ryAHHQpPvCEdN4dDQFNnZSNTq3hJucHktK9e2UCmk6eX~fbvhWGbMzkG90nW6a00oWff5VhAf5hPv2dSHP5GKIZB7HME4Y1sFXmuTSy2NC9GPSb7nacZN7s5Mq2vGuCl7sedUkvoikmrA0MZjHfUzK3G--cPAfW8e8uOpqa1CrAdOZDaPIvRrrpa1jDAIA__")
-    center/cover;
+  background: black;
 }
 
 .container {

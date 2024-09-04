@@ -7,7 +7,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ click }) {
   return (
     <div className="header">
       <div className="container">
@@ -31,7 +31,7 @@ function Header() {
           </ul>
           <div className="header__search">
             <div className="header__input">
-              <input type="text" placeholder="Напишите ID" />
+              <input type="text" onChange={click} placeholder="Напишите ID" />
               <IoSearch className="header__icon1" />
             </div>
             <Link to="/menu">
@@ -42,7 +42,12 @@ function Header() {
             </Link>
           </div>
         </div>
-        <input className="header__ser" type="text" placeholder="Напишите ID" />
+        <input
+          className="header__ser"
+          onChange={click}
+          type="text"
+          placeholder="Напишите ID"
+        />
       </div>
     </div>
   );

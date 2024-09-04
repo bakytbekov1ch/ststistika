@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const API = "https://6631e14cc51e14d69562ac56.mockapi.io/statistika";
 
-function Home() {
+function Home({ search }) {
   const [phomen, setPhomen] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,10 @@ function Home() {
       })
       .catch((err) => console.log(err));
   };
+
+  const phoneClick = phomen.filter((x) =>
+    x.codeId.toUpperCase().includes(search.toUpperCase())
+  );
 
   return (
     <div className="home">
@@ -45,7 +49,7 @@ function Home() {
             </thead>
             <tbody>
               <div className="home__block">
-                {phomen.map((item, index) => (
+                {phoneClick.map((item, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{item.name}</td>
@@ -80,7 +84,7 @@ function Home() {
             </tr>
           </div>
           <div className="home__w3">
-            {phomen.map((item) => (
+            {phoneClick.map((item) => (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
